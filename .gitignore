@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+# Written by sync-skills --apply; local discovery state (see README optional apply block).
+**/.agent-skill-ops-sync-manifest.json

@@ -1,0 +1,24 @@
+[project]
+name = "agent-skill-ops"
+version = "0.1.0"
+description = "Public-safe diagnostic toolkit for agent skill loading across harnesses."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "agent-skill-ops contributors" }]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+skills-doctor = "agent_skill_ops.cli:main_doctor"
+sync-skills = "agent_skill_ops.cli:main_sync"
+audit-public-safety = "agent_skill_ops.cli:main_audit"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

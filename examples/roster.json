@@ -1,0 +1,29 @@
+{
+  "skills": [
+    {
+      "id": "explain-error",
+      "visible": true,
+      "userInvocable": true
+    },
+    {
+      "id": "plan-task",
+      "visible": true,
+      "userInvocable": true
+    },
+    {
+      "id": "summarize-notes",
+      "visible": true,
+      "userInvocable": true
+    },
+    {
+      "id": "review-diff",
+      "visible": true,
+      "userInvocable": true
+    },
+    {
+      "id": "internal-only-skill",
+      "visible": false,
+      "userInvocable": false
+    }
+  ]
+}
