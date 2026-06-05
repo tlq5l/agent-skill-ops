@@ -1,7 +1,7 @@
 [project]
 name = "agent-skill-ops"
 version = "0.1.0"
-description = "Public-safe diagnostic toolkit for agent skill loading across harnesses."
+description = "Stdlib-only diagnostics for agent skill folders."
 readme = "README.md"
 license = { text = "Apache-2.0" }
 authors = [{ name = "agent-skill-ops contributors" }]

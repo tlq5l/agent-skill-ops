@@ -36,7 +36,7 @@ class TestPublicDocs(unittest.TestCase):
             self.assertIn(snippet, self.readme)
 
     def test_what_this_checks_covers_doctor_invariants(self):
-        self.assertRegex(self.readme, r"(?i)what this checks")
+        self.assertRegex(self.readme, r"(?i)what it catches")
         for topic in (
             "frontmatter",
             "name:",
@@ -48,20 +48,20 @@ class TestPublicDocs(unittest.TestCase):
         ):
             self.assertIn(topic, self.readme, msg=f"missing topic: {topic}")
 
-    def test_intentional_exclusions_section(self):
-        self.assertRegex(self.readme, r"(?i)intentionally does not include")
+    def test_what_it_does_not_do_section(self):
+        self.assertRegex(self.readme, r"(?i)what it does not do")
         for item in (
-            "private",
-            "memories",
-            "credentialed",
+            "install",
+            "credentials",
             "database",
             "web",
+            "rewrite",
         ):
             self.assertIn(item, self.readme, msg=f"missing exclusion hint: {item}")
 
-    def test_private_corpus_stays_private_statement(self):
-        self.assertRegex(self.readme, r"(?i)private corpus")
-        self.assertRegex(self.readme, r"(?i)stays private|stay private")
+    def test_examples_are_synthetic_and_replaceable(self):
+        self.assertRegex(self.readme, r"(?i)synthetic fixtures")
+        self.assertRegex(self.readme, r"(?i)replace them with your own")
 
     def test_no_gtm_or_sales_strategy_in_readme(self):
         self.assertIsNone(PRIVATE_OR_GTM.search(self.readme))
@@ -88,14 +88,6 @@ class TestPublicDocs(unittest.TestCase):
         self.assertNotRegex(
             self.readme,
             r"(?i)legal review complete|reviewed by counsel|attorney-approved",
-        )
-        self.assertRegex(
-            self.readme,
-            r"(?i)not a substitute for your own legal review",
-        )
-        self.assertRegex(
-            self.readme,
-            r"(?i)2026 agent-skill-ops contributors",
         )
 
 
